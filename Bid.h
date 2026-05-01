@@ -10,18 +10,20 @@ protected:
     int bidId;
     double amount;
     int userId;
+    int itemId; // ADDED
 
 public:
     static int totalBids;
 
     // Constructor
-    Bid(int id, double amt, int uid);
+    Bid(int id, double amt, int uid, int iid); // ADDED itemId parameter
 
     // POLYMORPHISM (pure virtual → makes class abstract)
     virtual void display() const = 0;
 
-    // Getter
+    // Getters
     double getAmount() const;
+    int getItemId() const; // ADDED
 
     // OPERATOR OVERLOADING (comparison rule)
     bool operator>(const Bid &b) const;

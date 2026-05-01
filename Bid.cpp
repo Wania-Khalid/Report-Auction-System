@@ -4,17 +4,22 @@
 int Bid::totalBids = 0;
 
 // Constructor
-Bid::Bid(int id, double amt, int uid) {
+Bid::Bid(int id, double amt, int uid, int iid) {
     bidId = id;
     amount = amt;
     userId = uid;
+    itemId = iid; // ADDED
 
     totalBids++;
 }
 
-// Getter
+// Getters
 double Bid::getAmount() const {
     return amount;
+}
+
+int Bid::getItemId() const { 
+    return itemId;
 }
 
 // Operator overloading
