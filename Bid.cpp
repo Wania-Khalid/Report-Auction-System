@@ -8,7 +8,7 @@ Bid::Bid(int id, double amt, int uid, int iid) {
     bidId = id;
     amount = amt;
     userId = uid;
-    itemId = iid; // ADDED
+    itemId = iid; 
 
     totalBids++;
 }

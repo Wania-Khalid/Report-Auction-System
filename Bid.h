@@ -10,7 +10,7 @@ protected:
     int bidId;
     double amount;
     int userId;
-    int itemId; // ADDED
+    int itemId; 
 
 public:
     static int totalBids;
@@ -23,7 +23,7 @@ public:
 
     // Getters
     double getAmount() const;
-    int getItemId() const; // ADDED
+    int getItemId() const;
 
     // OPERATOR OVERLOADING (comparison rule)
     bool operator>(const Bid &b) const;
