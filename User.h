@@ -10,10 +10,8 @@ protected:
     string password;
 
 public:
-    // Default constructor
     User() {}
 
-    // Parameterized constructor
     User(string u, string p) {
         username = u;
         password = p;
@@ -23,7 +21,6 @@ public:
     void setUsername(string u) {
         username = u;
     }
-
     void setPassword(string p) {
         password = p;
     }
@@ -37,7 +34,7 @@ public:
         return password;
     }
 
-    // Pure virtual function (important for polymorphism)
+    // Pure virtual function 
     virtual void menu() = 0;
 };
 
