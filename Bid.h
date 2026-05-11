@@ -31,7 +31,7 @@ public:
     // FRIEND FUNCTION
     friend bool compareBids(const Bid &b1, const Bid &b2);
 
-    virtual ~Bid() {}
+    virtual ~Bid() { cout << "[Bid #" << bidId << "] destroyed.\n"; }
 };
 
 #endif
