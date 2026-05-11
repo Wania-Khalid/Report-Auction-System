@@ -2,7 +2,10 @@
 #define USER_H
 
 #include <iostream>
+#include <string>
 using namespace std;
+
+class Item; // forward declaration
 
 class User {
 protected:
@@ -12,30 +15,18 @@ protected:
 public:
     User() {}
 
-    User(string u, string p) {
-        username = u;
-        password = p;
-    }
-
-    // Setters
-    void setUsername(string u) {
-        username = u;
-    }
-    void setPassword(string p) {
-        password = p;
-    }
+    User(string u, string p) : username(u), password(p) {}
 
     // Getters
-    string getUsername() {
-        return username;
-    }
+    string getUsername() const { return username; }
+    string getPassword() const { return password; }
 
-    string getPassword() {
-        return password;
-    }
+    virtual void menu(Item items[], int& itemCount) = 0;
 
-    // Pure virtual function 
-    virtual void menu() = 0;
+    // Destructor
+    virtual ~User() {
+        cout << "[User] '" << username << "' destroyed.\n";
+    }
 };
 
 #endif
