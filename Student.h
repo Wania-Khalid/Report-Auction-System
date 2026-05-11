@@ -28,11 +28,35 @@ public:
 
     // Overriding virtual function
     void menu() override {
-        cout << "Student Menu:\n";
+    int choice;
+
+    do {
+        cout << "\nStudent Menu:\n";
         cout << "1. View Items\n";
         cout << "2. Place Bid\n";
-        cout << "3. Logout\n";
-    }
+        cout << "0. Logout\n";
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Showing items...\n";
+                break;
+
+            case 2:
+                cout << "Placing bid...\n";
+                break;
+
+            case 0:
+                cout << "Logging out...\n";
+                break;
+
+            default:
+                cout << "Invalid choice\n";
+        }
+
+    } while (choice != 0);
+}
 };
 
 #endif
