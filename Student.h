@@ -12,11 +12,19 @@ private:
     string studentID;
 
 public:
+<<<<<<< HEAD
     // Default / parameterized constructor 
     Student(string u = "", string p = "", string id = "")
         : User(u, p), studentID(id) {}
 
     // Copy constructor
+=======
+    // Default / parameterized constructor (with initialization list)
+    Student(string u = "", string p = "", string id = "")
+        : User(u, p), studentID(id) {}
+
+    // Copy constructor (requirement: copy constructor)
+>>>>>>> dd683dcfd25b287630a973268b86dfd21b895154
     Student(const Student& other)
         : User(other.username, other.password), studentID(other.studentID) {
         cout << "[Student] Copy constructor called for '" << username << "'.\n";
@@ -25,9 +33,16 @@ public:
     // Getter
     string getStudentID() const { return studentID; }
 
+<<<<<<< HEAD
     // Setter using 'this' pointer 
     void setStudentID(string studentID) { this->studentID = studentID; }
 
+=======
+    // Setter using 'this' pointer (requirement: this pointer)
+    void setStudentID(string studentID) { this->studentID = studentID; }
+
+    // Legacy menu — kept for compatibility; real interaction via CLI in main.cpp
+>>>>>>> dd683dcfd25b287630a973268b86dfd21b895154
     void menu(Item items[], int& itemCount) override {
         int choice;
         do {
@@ -68,4 +83,8 @@ public:
     }
 };
 
+<<<<<<< HEAD
 #endif
+=======
+#endif
+>>>>>>> dd683dcfd25b287630a973268b86dfd21b895154

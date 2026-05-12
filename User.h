@@ -23,6 +23,7 @@ public:
 
     virtual void menu(Item items[], int& itemCount) = 0;
 
+<<<<<<< HEAD
     // Destructor
     virtual ~User() {
         cout << "[User] '" << username << "' destroyed.\n";
@@ -30,3 +31,14 @@ public:
 };
 
 #endif
+=======
+   // Destructor with visible output - Only prints for valid users
+    virtual ~User() {
+        if (!username.empty()) {
+            cout << "[User] '" << username << "' destroyed.\n";
+        }
+    }
+};
+
+#endif
+>>>>>>> dd683dcfd25b287630a973268b86dfd21b895154
